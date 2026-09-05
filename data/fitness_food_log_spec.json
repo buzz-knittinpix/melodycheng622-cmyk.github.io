@@ -1,0 +1,76 @@
+{
+  "sheets": [
+    {
+      "name": "Food Log",
+      "rows": [
+        [
+          {"value": "日期", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}},
+          {"value": "餐次", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}},
+          {"value": "食物", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}},
+          {"value": "估計卡路里 (kcal)", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}},
+          {"value": "合理下限", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}},
+          {"value": "合理上限", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}},
+          {"value": "備註", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "1F4E78", "alignment": {"horizontal": "center"}}}
+        ],
+        ["2026-08-19", "Lunch", "烤牛肉（約205g熟肉／中等油花）＋沙律／蔬菜＋少量醬汁＋蒜蓉包＋羅宋湯", 900, 815, 995, "羅宋湯約275mL，按約120 kcal 計"],
+                ["2026-08-19", "Dinner", "烤鯖魚半條＋菜", 280, 220, 340, "未有份量相片"],
+                ["2026-08-19", "Total", "已報餐次合計", 1180, 1035, 1335, "暫按沒有早餐、零食及含糖飲品計"],
+        ["2026-08-20", "Meal", "蝦 6 隻＋西蘭花、椰菜花、紅蘿蔔、洋蔥、菇、菜等清湯／清煮蔬菜", 180, 130, 220, "相中未見大量油或醬汁；若有食用 1 湯匙油，另加約120 kcal"],
+        ["2026-08-20", "Dinner", "YOZM 無糖西梅希臘乳酪130g（280 kcal、蛋白13g）＋黑椒雞柳70g（生重）＋一大碗無油雜菜", 500, 455, 550, "已確認全程無落油；雞柳約70g生重"],
+        ["2026-08-20", "Total", "已報餐次合計", 680, 635, 730, "用戶確認今天不再進食；只計已報食物"],
+        ["2026-08-21", "Lunch", "沙律菜無醬60g＋粉絲被64kcal＋7-11 Fitasy 泰式封門柳150kcal", 229, 219, 249, "標示卡路里為主；沙律菜按約15kcal計"],
+        ["2026-08-21", "Dinner", "白灼中型基維蝦約12隻＋連殼枝豆約200g＋菜心", 280, 230, 340, "枝豆連殼約200g（可食豆約90–100g）；假設白灼／少油"],
+        ["2026-08-21", "Snack", "蝴蝶酥 1 塊（已確認；中等手掌size）", 180, 150, 220, "相片校準：約30–40g；用戶於 lunch 時段食用"],
+        ["2026-08-21", "Total", "已報餐次合計", 689, 599, 809, "含蝴蝶酥；暫按沒有早餐、其他零食及含糖飲品計"],
+        ["", "", "", "", "", "", ""]
+      ],
+      "column_widths": {"A": 14, "B": 12, "C": 58, "D": 20, "E": 14, "F": 14, "G": 50},
+      "freeze_panes": "A2",
+      "autofilter": "A1:G4"
+    },
+    {
+      "name": "Body & Training",
+      "rows": [
+        [
+          {"value": "日期", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "548235", "alignment": {"horizontal": "center"}}},
+          {"value": "體重 (kg)", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "548235", "alignment": {"horizontal": "center"}}},
+          {"value": "重量訓練", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "548235", "alignment": {"horizontal": "center"}}},
+          {"value": "Cardio", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "548235", "alignment": {"horizontal": "center"}}},
+          {"value": "備註", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "548235", "alignment": {"horizontal": "center"}}}
+        ],
+        ["2026-08-19 21:13", 64.6, "有（未提供機種／組數）", "無", "BIA：BMI 25.2、體脂38%（24.5kg）、骨骼肌21.6kg、內臟脂肪12、BMR 1234 kcal"],
+        ["2026-08-20 morning", 63.95, "", "", "晨早量度；較8/19晚間 gym 後 BIA 讀數低0.65kg，主要當作量度條件差異／水分與食物重量，不當作一日減脂"],
+        ["2026-08-21", 64.15, "", "", "用戶報體重；較昨晨 63.95kg 高 0.20kg，屬正常日內／日間波動"],
+        ["", "", "", "", ""]
+      ],
+      "column_widths": {"A": 14, "B": 14, "C": 32, "D": 14, "E": 52},
+      "freeze_panes": "A2",
+      "autofilter": "A1:E2"
+    },
+    {
+      "name": "Weekly Plan",
+      "rows": [
+        [
+          {"value": "項目", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "7F6000", "alignment": {"horizontal": "center"}}},
+          {"value": "目前設定／備註", "style": {"font": {"bold": true, "color": "FFFFFF"}, "fill": "7F6000", "alignment": {"horizontal": "center"}}}
+        ],
+        ["BMR", "BIA 估算 1234 kcal（屬估算值，不是每日可食上限）"],
+        ["蛋白質目標", "每日約 90g；以每餐 30–40g 為主"],
+        ["本週總熱量目標", "約 10,500 kcal／週（平均 1,500 kcal／日）；按實際社交模式分配"],
+        ["1 日食好西", "全日上限約 2,500 kcal（包括飲品、甜品）"],
+        ["2 餐出街 Dinner", "各自所在全日約 1,500 kcal：日間先食清淡高蛋白，晚餐預留約900–1,000 kcal"],
+        ["2 餐出街 Lunch", "各自所在全日約 1,300 kcal：Lunch預留約700–800 kcal，晚餐清淡高蛋白"],
+        ["1 日 WFH 清淡日", "約 1,200 kcal；今日680 kcal屬偶發，非日常目標"],
+        ["1 日一般日", "約 1,200 kcal"],
+        ["重量訓練", "每週2次，可放在外出 Lunch／Dinner 日；不額外『賺卡路里』，每餐仍守蛋白質"],
+        ["追蹤方法", "每次報食物、卡路里或體重後更新此檔；未確認資料會清楚標記"],
+        ["中期體重目標", "2026-09-30：62.0 kg（由63.95kg減1.95kg；約5.9週，需平均約0.33kg／週）"],
+        ["目標", "減重／影相好睇，同時準備 2026-10-02 雷鳥莊＋雄山"],
+        ["", ""]
+      ],
+      "column_widths": {"A": 22, "B": 88},
+      "freeze_panes": "A2",
+      "autofilter": "A1:B6"
+    }
+  ]
+}
