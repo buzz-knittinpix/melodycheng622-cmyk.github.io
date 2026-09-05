@@ -20,11 +20,11 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;bo
 .bars{display:flex;align-items:flex-end;gap:8px;height:108px}.barcol{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}.bar{width:100%;background:var(--bar);min-height:2px}.bar.on{background:var(--accent)}.bar.low{background:var(--floor)}.bar.high{background:var(--warn)}.bar.empty{background:var(--bg3);height:4px!important}.barcol .v{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);margin-bottom:6px}.barcol .d{font-size:10px;color:var(--dim);margin-top:6px}
 .goals{list-style:none}.goals li{display:grid;grid-template-columns:72px 1fr auto;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:13px}.goals li:last-child{border-bottom:0}.when{color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:11px}.kg{font-family:"IBM Plex Mono",monospace}.circ{display:flex;gap:8px}.circ .c{flex:1;background:var(--bg3);padding:12px 8px;text-align:center}.circ b{display:block;font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500}.circ span{display:block;margin-top:4px;font-size:11px;color:var(--muted)}.notes{font-size:12px;line-height:1.55;color:var(--muted)}.notes p+p{margin-top:8px}.notes strong{color:var(--ink);font-weight:500}.gym-list{list-style:none}.gym-list li{padding:9px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:78px 1fr;gap:10px;font-size:12px;line-height:1.45}.gym-list li:last-child{border-bottom:0}.gym-list .gdate{font-family:"IBM Plex Mono",monospace;color:var(--accent);font-size:11px}.gym-list strong{font-weight:500;color:var(--ink)}
 .view[hidden]{display:none}table.hist{width:100%;border-collapse:collapse;font-size:13px}table.hist th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:8px 8px 8px 0;border-bottom:1px solid var(--line)}table.hist td{padding:9px 8px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}.num{font-family:"IBM Plex Mono",monospace;white-space:nowrap}.week-index{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.week-card{padding:16px;border:1px solid var(--line);background:var(--bg2);text-align:left;cursor:pointer;min-height:124px}.week-card:hover{border-color:var(--ink)}.week-card .wk{font-family:"IBM Plex Mono",monospace;font-size:16px}.week-card .wkmeta{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}.week-card .wkstatus{font-size:11px;color:var(--accent);margin-top:12px}.archive-detail{margin-top:10px}.empty-msg{padding:28px 0;color:var(--muted);font-size:13px}
-footer{margin-top:12px;font-size:11px;color:var(--dim);font-family:"IBM Plex Mono",monospace}@media(max-width:900px){.kpis,.grid2,.grid3{grid-template-columns:1fr 1fr}.kpi .n{font-size:24px}}@media(max-width:620px){body{padding:16px}.kpis,.grid2,.grid3,.week-index{grid-template-columns:1fr}.kpi .n{font-size:26px}}
+.cmp{width:100%;border-collapse:collapse;font-size:12px}.cmp th{text-align:right;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:6px 6px 6px 0;border-bottom:1px solid var(--line)}.cmp th:first-child,.cmp td:first-child{text-align:left}.cmp td{padding:7px 6px 7px 0;border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;text-align:right;font-size:12px}.cmp tr.pick td{background:var(--bg3)}.segrow{display:grid;grid-template-columns:72px 1fr 56px;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:12px}.segrow:last-child{border-bottom:0}.segrow .lab{color:var(--muted)}.scan-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:10px}.scan-card{padding:14px;border:1px solid var(--line);background:var(--bg2);text-align:left;cursor:pointer;min-height:108px}.scan-card:hover{border-color:var(--ink)}.scan-card[aria-selected="true"]{border-color:var(--ink);background:var(--bg3)}.scan-card .wk{font-family:"IBM Plex Mono",monospace;font-size:15px}.scan-card .wkmeta{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}.scan-card .wkstatus{font-size:11px;color:var(--accent);margin-top:10px}.cmp .latest{color:var(--accent);font-weight:500}.sym{font-size:11px;color:var(--dim);margin-top:8px}@media(max-width:900px){.scan-index{grid-template-columns:1fr 1fr}}@media(max-width:620px){.scan-index{grid-template-columns:1fr}}footer{margin-top:12px;font-size:11px;color:var(--dim);font-family:"IBM Plex Mono",monospace}@media(max-width:900px){.kpis,.grid2,.grid3{grid-template-columns:1fr 1fr}.kpi .n{font-size:24px}}@media(max-width:620px){body{padding:16px}.kpis,.grid2,.grid3,.week-index{grid-template-columns:1fr}.kpi .n{font-size:26px}}
 </style>
 </head>
 <body><div class="wrap">
-<header><div><h1>Melody · 減脂進度</h1><div class="asof">截至 2026-09-05 · 來源 fitness_food_log.xlsx</div></div><div class="header-tools"><div class="tabs" role="tablist"><button class="tab" id="tab-week" aria-selected="true">本週</button><button class="tab" id="tab-archive" aria-selected="false">每週檔案</button><button class="tab" id="tab-history" aria-selected="false">逐筆紀錄</button></div><label class="theme-sel">主題 <select id="theme-select" aria-label="選擇主題"><option value="paper">紙</option><option value="night">夜</option><option value="contrast">對比</option></select></label></div></header>
+<header><div><h1>Melody · 減脂進度</h1><div class="asof">截至 2026-09-05 · 來源 fitness_food_log.xlsx</div></div><div class="header-tools"><div class="tabs" role="tablist"><button class="tab" id="tab-week" aria-selected="true">本週</button><button class="tab" id="tab-archive" aria-selected="false">每週檔案</button><button class="tab" id="tab-history" aria-selected="false">逐筆紀錄</button><button class="tab" id="tab-bia" aria-selected="false">體組成</button></div><label class="theme-sel">主題 <select id="theme-select" aria-label="選擇主題"><option value="paper">紙</option><option value="night">夜</option><option value="contrast">對比</option></select></label></div></header>
 
 <section id="view-week" class="view">
  <section class="kpis"><div class="kpi"><div class="label">晨磅</div><div class="n">63.5<span>kg</span></div><div class="sub">9/4 · 較昨晨 ＋0.2，單日波動，等7日趨勢 · 7日均 63.6</div></div><div class="kpi"><div class="label">本週已報</div><div class="n">6,626</div><div class="sub">8/31–9/6 · 一 470 ＋ 二 735 ＋ 三 1,010 ＋ 四 666 ＋ 五 3,745（日結）</div></div><div class="kpi"><div class="label">本週額度</div><div class="n">9,100<span>–</span>9,800</div><div class="sub">日均 1,300–1,400</div></div><div class="kpi"><div class="label">體脂（BIA）</div><div class="n">35.5<span>%</span></div><div class="sub">9/1 18:31 · 8/29 為 35.8%</div></div></section>
@@ -36,7 +36,27 @@ footer{margin-top:12px;font-size:11px;color:var(--dim);font-family:"IBM Plex Mon
 
 <section id="view-archive" class="view" hidden><div class="panel"><h2>每週檔案 · 每個星期嘅 quota snapshot</h2><div class="week-index" id="week-index"></div></div><div class="panel archive-detail" id="archive-detail"></div></section>
 <section id="view-history" class="view" hidden><div class="pills" id="hist-pills" style="margin-bottom:12px"><button class="pill" data-filter="all" aria-selected="true">全部</button><button class="pill" data-filter="weight" aria-selected="false">體重</button><button class="pill" data-filter="kcal" aria-selected="false">卡路里</button><button class="pill" data-filter="train" aria-selected="false">訓練</button></div><div class="panel"><h2>逐筆紀錄 · 只顯示已入 log 嘅實數</h2><table class="hist"><thead><tr><th>日期</th><th>類型</th><th>紀錄</th><th>數值</th></tr></thead><tbody id="hist-body"></tbody></table></div></section>
-<footer>160 cm · HowBodyFit BIA 唔當臨床 · 8/29 BIA 完整數據已存 Body & Training · 週檔案保留每週 quota</footer>
+<section id="view-bia" class="view" hidden>
+ <section class="kpis" id="bia-kpis"></section>
+ <div class="scan-index" id="bia-scans"></div>
+ <section class="grid2">
+  <div class="panel"><h2>體脂率 % · 傍晚 gym BIA</h2><div id="bia-chart-bfp"></div><div class="band">只比傍晚 gym 對傍晚 gym。3 日內跌幅當水，唔當減脂。</div></div>
+  <div class="panel"><h2>骨骼肌 kg</h2><div id="bia-chart-muscle"></div><div class="band">有用訊號＝肌大致守住 22 kg 以上，唔係單次 +0.4。</div></div>
+ </section>
+ <section class="grid2" style="margin-top:10px">
+  <div class="panel"><h2>體脂肪 kg</h2><div id="bia-chart-fat"></div><div class="band">8/19 → 9/1 表面 −1.8 kg。方向得，但短線唔當實減。</div></div>
+  <div class="panel"><h2>體重 · BIA kg（唔當晨磅）</h2><div id="bia-chart-wt"></div><div class="band">BIA 體重同晨磅分開。9/1 BIA 63.9 ≠ 當日晨磅 63.2。</div></div>
+ </section>
+ <section class="grid2" style="margin-top:10px">
+  <div class="panel" id="bia-detail"></div>
+  <div class="panel" id="bia-seg"></div>
+ </section>
+ <section class="grid2" style="margin-top:10px">
+  <div class="panel"><h2>四次對照 · 只顯示已 upload 嘅實數</h2><div style="overflow:auto"><table class="cmp" id="bia-table"></table></div></div>
+  <div class="panel"><h2>點睇</h2><div class="notes"><p><strong>HowBodyFit 唔當臨床。</strong> 體脂／肌／內臟／代謝年齡係演算法估算。</p><p>要比就<strong>傍晚 gym 對傍晚 gym</strong>。晨磅、缺水晚磅、BIA 唔好亂比。</p><p><strong>3 日內脂肪移動當水。</strong> 9/1 對 8/29：BFP −0.3 pp、脂 −0.4、肌 −0.1 —— 唔當減咗 0.4 脂。</p><p>有用嘅係：體脂／脂肪量幾星期持續向下，同時骨骼肌守住約 <strong>22 kg</strong>。左右分段肌對稱、正常。</p><p>唔採用 app 理想體重 53.9 或脂肪控制 −10 kg 做 deadline。</p></div></div>
+ </section>
+</section>
+<footer>160 cm · HowBodyFit BIA 唔當臨床 · 體組成 tab 追蹤已 upload 嘅 8/19、8/23、8/29、9/1 · 完整分段在 Body & Training</footer>
 </div>
 <script>
 const WEEKLY_ARCHIVES=[
@@ -58,11 +78,83 @@ const HIST=[
  {date:'2026-08-31',kind:'weight',type:'晨磅',rec:'昨日大餐後＋0.50kg，先當鹽分／肝醣水／腸胃內容物',val:'64.25 kg'},{date:'2026-08-31',kind:'kcal',type:'卡路里',rec:'lunch 145；dinner 三文魚＋雞柳＋生菜＋連殼枝豆143g；蝦未食；日結偏低',val:'470'},{date:'2026-08-31',kind:'weight',type:'晚間秤',rec:'返屋企、食飯前、未飲水；較晨磅−1.15kg，當缺水／腸空，唔當減脂',val:'63.1 kg'},{date:'2026-08-31',kind:'weight',type:'晚間秤',rec:'食完＋飲完水；由63.1回升0.75；較晨磅−0.40，仍唔當新底',val:'63.85 kg'},{date:'2026-09-01',kind:'weight',type:'晨磅',rec:'較昨晨64.25 −1.05；尋日470＋大餐水走，當腸空／肝醣水，唔當新底。7日均64.0',val:'63.2 kg'},{date:'2026-09-01',kind:'kcal',type:'卡路里',rec:'lunch 200；snack yoghurt；dinner 鯖74g＋椰菜花＋蒸蛋3tbsp＋奇異果1；snack yoghurt；日結偏低',val:'735'},{date:'2026-09-01',kind:'weight',type:'BIA 18:31',rec:'Score69 · BFP35.5% · 肌22.4 · 脂22.7 · 對8/29 −0.3pp／−0.4脂，3日當水，唔當減脂',val:'63.9 kg'},{date:'2026-09-01',kind:'train',type:'全身＋行',rec:'LP15kg；pulldown10（15太重）；chest4×15@7.5；squat無餅；Star Trac 24:56／1.65km／爬升93m／HR116 Easy；完成',val:'95 active'},{date:'2026-09-02',kind:'weight',type:'晨磅',rec:'較昨晨63.2 −0.2；連續兩日偏低後，當水／腸空，唔當新底。7日均63.9',val:'63.0 kg'},{date:'2026-09-02',kind:'weight',type:'圍度',rec:'上腹75／肚臍78／下腹86；對8/27 78／83／90。6日跌幅當水，唔當脂。蘋果型仍在',val:'75／78／86'},{date:'2026-09-02',kind:'kcal',type:'卡路里',rec:'lunch 175；dinner 表嫂兩碗河50/50；桃2÷3；玉米30粒；日結 910＋100 buffer＝1,010',val:'1,010'},{date:'2026-09-03',kind:'weight',type:'晨磅',rec:'較昨晨63.0 ＋0.3；尋日河粉後日回水，唔當增脂。7日均63.7',val:'63.3 kg'},{date:'2026-09-03',kind:'kcal',type:'卡路里',rec:'lunch120；gym前115；番茄雞柳＋菜心233；水蜜桃2÷3＝65；晴王8粒＝80；白玉米1÷3＝53；日結',val:'666'},{date:'2026-09-03',kind:'train',type:'全身＋行回家',rec:'LP15；pulldown10；glute4×10@12；chest4×12@7.5（15推唔到）；squat無餅；腿抖skip機上平路；行回家700m；完成',val:'700 m'},
  {date:'2026-09-04',kind:'weight',type:'晨磅',rec:'較昨晨63.3 ＋0.2；單日波動，等7日晨磅平均判斷，不當作增脂',val:'63.5 kg'},{date:'2026-09-04',kind:'kcal',type:'卡路里',rec:'lunch 沙律菜＋牛160＝175；Nissa RW 食物2,820＋wine5＋cocktail抹茶蓋＝750；日結',val:'3,745'}
 ];
+
+const BIA=[
+ {id:'2026-08-19',label:'8/19 21:13',cond:'gym 後 HowBodyFit，唔當晨磅',
+  wt:64.6,bmi:25.2,bfp:38.0,fat:24.5,muscle:21.6,ffm:null,water:null,protein:null,mineral:null,icf:null,ecf:null,visc:12,whr:null,bmr:1234,score:null,age:null,
+  m:{la:null,ra:null,tr:null,ll:null,rl:null},f:{la:null,ra:null,tr:null,ll:null,rl:null},
+  note:'第一次上傳。分段未報。'},
+ {id:'2026-08-23',label:'8/23 18:47',cond:'gym 後 HowBodyFit',
+  wt:64.6,bmi:25.2,bfp:37.0,fat:23.9,muscle:22.1,ffm:40.6,water:29.6,protein:null,mineral:null,icf:null,ecf:null,visc:11,whr:0.88,bmr:1246,score:67,age:35,
+  m:{la:1.9,ra:1.9,tr:18.0,ll:6.1,rl:6.2},f:{la:1.8,ra:1.8,tr:11.8,ll:3.7,rl:3.7},
+  note:'分段肌全 normal、左右對稱。脂肪分段均 High。對 8/19：BFP −1.0 pp、肌 ＋0.5、脂 −0.6；4 日當水／運動後，唔當減脂或增肌。'},
+ {id:'2026-08-29',label:'8/29 17:46',cond:'gym 後 HowBodyFit · 完整報告',
+  wt:64.4,bmi:25.2,bfp:35.8,fat:23.1,muscle:22.5,ffm:41.3,water:30.1,protein:8.2,mineral:3.0,icf:18.8,ecf:11.3,visc:11,whr:0.90,bmr:1262,score:69,age:35,
+  m:{la:2.0,ra:2.1,tr:18.4,ll:6.1,rl:6.2},f:{la:1.7,ra:1.7,tr:11.7,ll:3.4,rl:3.4},
+  note:'完整分段已入 Body & Training。對 8/23：BFP −1.2 pp、脂 −0.8、肌 ＋0.4、水 ＋0.5。6 日唔當實增 0.4 肌或實減 0.8 脂。'},
+ {id:'2026-09-01',label:'9/1 18:31',cond:'gym 後 HowBodyFit',
+  wt:63.9,bmi:25.0,bfp:35.5,fat:22.7,muscle:22.4,ffm:41.2,water:30.0,protein:8.1,mineral:3.1,icf:18.7,ecf:11.3,visc:11,whr:0.88,bmr:1259,score:69,age:35,
+  m:{la:2.0,ra:2.0,tr:18.3,ll:6.2,rl:6.2},f:{la:1.7,ra:1.6,tr:11.4,ll:3.5,rl:3.5},
+  note:'對 8/29：體重 −0.5、BFP −0.3 pp、脂 −0.4、肌 −0.1。3 日當水，唔當減脂。今晨磅 63.2 ≠ 呢個 63.9。'}
+];
+function nfmt(v,d){return (v==null||v==='')?'—':Number(v).toFixed(d)}
+function dlt(a,b,d,u){if(a==null||b==null)return '—';const n=b-a;if(Math.abs(n)<Math.pow(10,-d-1))return '0'+u;return (n>0?'＋':'−')+Math.abs(n).toFixed(d)+u}
+function spark(vals,min,max,unit){
+  const pts=vals.map((v,i)=>{const x=36+(624-36)*(vals.length===1?0:i/(vals.length-1));const y=148-((v-min)/(max-min))*128;return [x,y,v]});
+  const poly=pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+  const mid=(min+max)/2;
+  return `<svg class="chart" viewBox="0 0 640 168" preserveAspectRatio="none"><line x1="36" y1="20" x2="624" y2="20" stroke="var(--line)"/><line x1="36" y1="84" x2="624" y2="84" stroke="var(--line)"/><line x1="36" y1="148" x2="624" y2="148" stroke="var(--line)"/><text x="0" y="24" fill="var(--dim)" font-size="10" font-family="IBM Plex Mono">${nfmt(max,1)}${unit}</text><text x="0" y="88" fill="var(--dim)" font-size="10" font-family="IBM Plex Mono">${nfmt(mid,1)}${unit}</text><text x="0" y="152" fill="var(--dim)" font-size="10" font-family="IBM Plex Mono">${nfmt(min,1)}${unit}</text><polyline fill="none" stroke="var(--accent)" stroke-width="2.2" points="${poly}"/><g fill="var(--accent)">${pts.map((p,i)=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="${i===pts.length-1?3.4:3}"/>`).join('')}</g></svg><div class="band">${BIA.map((s,i)=>s.label.replace(/ .*/,'')+' '+nfmt(vals[i],1)).join(' · ')}</div>`;
+}
+function segRows(obj, keys, hi){
+  if(!obj || keys.every(k=>obj[k]==null)) return '<div class="band">呢次未 upload 分段。</div>';
+  const max=Math.max(...keys.map(k=>obj[k]||0),0.1);
+  return keys.map(([k,lab])=>{
+    const v=obj[k]; const w=v==null?0:Math.max(6,Math.round(v/max*100));
+    const mark=v==null?'—':(hi?'High · ':'')+v.toFixed(1)+' kg';
+    return `<div class="segrow"><span class="lab">${lab}</span><div class="track"><i style="width:${w}%;background:${hi?'var(--accent)':'var(--ink)'}"></i></div><span class="num">${mark}</span></div>`;
+  }).join('');
+}
+function renderBia(id){
+  const last=BIA[BIA.length-1];
+  const s=BIA.find(x=>x.id===id)||last;
+  const first=BIA[0];
+  const prev=BIA[Math.max(0,BIA.indexOf(s)-1)];
+  const vsPrev=s!==first;
+  document.getElementById('bia-kpis').innerHTML=`<div class="kpi"><div class="label">體脂率</div><div class="n">${nfmt(s.bfp,1)}<span>%</span></div><div class="sub">${s.label} · 對首次 ${dlt(first.bfp,s.bfp,1,' pp')}</div></div><div class="kpi"><div class="label">骨骼肌</div><div class="n">${nfmt(s.muscle,1)}<span>kg</span></div><div class="sub">對首次 ${dlt(first.muscle,s.muscle,1,' kg')} · 守住 22+</div></div><div class="kpi"><div class="label">體脂肪</div><div class="n">${nfmt(s.fat,1)}<span>kg</span></div><div class="sub">對首次 ${dlt(first.fat,s.fat,1,' kg')}</div></div><div class="kpi"><div class="label">Score</div><div class="n">${s.score==null?'—':s.score}</div><div class="sub">內臟脂肪 ${s.visc==null?'—':s.visc} · WHR ${nfmt(s.whr,2)}</div></div>`;
+  document.getElementById('bia-scans').innerHTML=BIA.map(x=>`<button class="scan-card" data-bia="${x.id}" aria-selected="${x.id===s.id}"><div class="wk">${x.label}</div><div class="wkmeta">${x.bfp.toFixed(1)}% · 肌 ${x.muscle.toFixed(1)} · 脂 ${x.fat.toFixed(1)}<br>${x.wt.toFixed(1)} kg</div><div class="wkstatus">${x.id===s.id?'而家呢張 →':'撳開呢次 dashboard'}</div></button>`).join('');
+  document.querySelectorAll('[data-bia]').forEach(b=>b.onclick=()=>renderBia(b.dataset.bia));
+  document.getElementById('bia-chart-bfp').innerHTML=spark(BIA.map(x=>x.bfp),35.0,38.5,'');
+  document.getElementById('bia-chart-muscle').innerHTML=spark(BIA.map(x=>x.muscle),21.4,22.7,'');
+  document.getElementById('bia-chart-fat').innerHTML=spark(BIA.map(x=>x.fat),22.4,24.7,'');
+  document.getElementById('bia-chart-wt').innerHTML=spark(BIA.map(x=>x.wt),63.6,64.8,'');
+  document.getElementById('bia-detail').innerHTML=`<h2>${s.label} · 今次詳情</h2><div class="notes"><p>${s.cond}</p></div><section class="kpis" style="grid-template-columns:1fr 1fr;margin:10px 0"><div class="kpi"><div class="label">BIA 體重</div><div class="n" style="font-size:22px">${nfmt(s.wt,1)}<span>kg</span></div></div><div class="kpi"><div class="label">BMI</div><div class="n" style="font-size:22px">${nfmt(s.bmi,1)}</div></div><div class="kpi"><div class="label">去脂體重</div><div class="n" style="font-size:22px">${nfmt(s.ffm,1)}<span>kg</span></div></div><div class="kpi"><div class="label">BMR</div><div class="n" style="font-size:22px">${s.bmr==null?'—':s.bmr}</div></div></section><div class="notes"><p>水 ${nfmt(s.water,1)} · 蛋白 ${nfmt(s.protein,1)} · 礦物質 ${nfmt(s.mineral,1)} · ICF ${nfmt(s.icf,1)} · ECF ${nfmt(s.ecf,1)}</p><p>代謝年齡 ${s.age==null?'—':s.age}（app 標示，非臨床）</p><p>${vsPrev?('對上次 '+prev.label+'：體重 '+dlt(prev.wt,s.wt,1,' kg')+' · BFP '+dlt(prev.bfp,s.bfp,1,' pp')+' · 肌 '+dlt(prev.muscle,s.muscle,1,' kg')+' · 脂 '+dlt(prev.fat,s.fat,1,' kg')):'第一次，無上次可比。'}</p><p>${s.note}</p></div>`;
+  const mKeys=[['la','左臂'],['ra','右臂'],['tr','軀幹'],['ll','左腿'],['rl','右腿']];
+  const hasSeg=s.m.la!=null;
+  const muscleRows=hasSeg?mKeys.map(([k,lab])=>{const v=s.m[k];const w=Math.max(8,Math.round(v/(k==='tr'?21:7.2)*100));return `<div class="segrow"><span class="lab">${lab}肌</span><div class="track"><i style="width:${Math.min(100,w)}%"></i></div><span class="num">${v.toFixed(1)} kg</span></div>`}).join(''):'';
+  const fatRows=hasSeg?mKeys.map(([k,lab])=>{const v=s.f[k];const w=Math.max(8,Math.round(v/(k==='tr'?12:4)*100));return `<div class="segrow"><span class="lab">${lab}脂</span><div class="track"><i style="width:${Math.min(100,w)}%;background:var(--accent)"></i></div><span class="num">High · ${v.toFixed(1)} kg</span></div>`}).join(''):'';
+  document.getElementById('bia-seg').innerHTML=hasSeg?`<h2>分段 · ${s.label}</h2><div class="band">肌肉（normal／對稱先算有用）</div>${muscleRows}<div class="band" style="margin-top:10px">脂肪（App 標 High；唔代表可局部減）</div>${fatRows}<div class="sym">左右臂／腿差 ≤ 0.1 kg，對稱。</div>`:`<h2>分段 · ${s.label}</h2><div class="band">呢次未 upload 分段。8/23 起先有左右臂／軀幹／腿。</div>`;
+  const cols=['項目'].concat(BIA.map(x=>x.label.replace(/ \d.*/,'')));
+  const rows=[
+    ['體重 kg',...BIA.map(x=>nfmt(x.wt,1))],
+    ['體脂率 %',...BIA.map(x=>nfmt(x.bfp,1))],
+    ['體脂肪 kg',...BIA.map(x=>nfmt(x.fat,1))],
+    ['骨骼肌 kg',...BIA.map(x=>nfmt(x.muscle,1))],
+    ['去脂 kg',...BIA.map(x=>nfmt(x.ffm,1))],
+    ['總水 kg',...BIA.map(x=>nfmt(x.water,1))],
+    ['內臟脂肪',...BIA.map(x=>x.visc==null?'—':String(x.visc))],
+    ['WHR',...BIA.map(x=>nfmt(x.whr,2))],
+    ['BMR',...BIA.map(x=>x.bmr==null?'—':String(x.bmr))],
+    ['Score',...BIA.map(x=>x.score==null?'—':String(x.score))]
+  ];
+  const si=BIA.indexOf(s);
+  document.getElementById('bia-table').innerHTML=`<thead><tr>${cols.map(c=>`<th>${c}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map((c,i)=>`<td${i===si?' class="latest"':''}>${c}</td>`).join('')}</tr>`).join('')}</tbody>`;
+}
+
 function applyTheme(t){if(t!=='night'&&t!=='contrast')t='paper';document.documentElement.setAttribute('data-theme',t);localStorage.setItem('melody-dashboard-theme',t);var sel=document.getElementById('theme-select');if(sel)sel.value=t}
-function selectTab(tab){['week','archive','history'].forEach(n=>{document.getElementById('view-'+n).hidden=n!==tab;document.getElementById('tab-'+n).setAttribute('aria-selected',n===tab)});localStorage.setItem('melody-dashboard-tab',tab)}
+function selectTab(tab){['week','archive','history','bia'].forEach(n=>{document.getElementById('view-'+n).hidden=n!==tab;document.getElementById('tab-'+n).setAttribute('aria-selected',n===tab)});localStorage.setItem('melody-dashboard-tab',tab)}
 function barClass(v){if(v==='—')return'empty';const n=Number(v.replace('*',''));return n>=2000?'high':n<1000?'low':'on'}
 function renderArchive(id){const w=WEEKLY_ARCHIVES.find(x=>x.id===id)||WEEKLY_ARCHIVES[0];document.getElementById('archive-detail').innerHTML=`<h2>${w.period} · ${w.status}</h2><section class="kpis" style="margin-bottom:10px"><div class="kpi"><div class="label">週額</div><div class="n" style="font-size:22px">${w.target}</div></div><div class="kpi"><div class="label">已用</div><div class="n">${w.used}</div></div><div class="kpi"><div class="label">剩餘</div><div class="n" style="font-size:22px">${w.left}</div></div><div class="kpi"><div class="label">狀態</div><div class="n" style="font-size:22px">${w.status}</div></div></section><div class="panel"><h2>每日卡路里</h2><div class="bars">${w.days.map((v,i)=>`<div class="barcol"><div class="v">${v}</div><div class="bar ${barClass(v)}" style="height:${v==='—'?4:Math.max(2,Math.round(Number(v.replace('*',''))/2830*100))}%"></div><div class="d">${['一','二','三','四','五','六','日'][i]}</div></div>`).join('')}</div><div class="band">${w.note}</div></div>`}
 function renderArchiveIndex(){document.getElementById('week-index').innerHTML=WEEKLY_ARCHIVES.map(w=>`<button class="week-card" data-archive="${w.id}"><div class="wk">${w.period}</div><div class="wkmeta">已用 ${w.used} · 剩餘 ${w.left}<br>${w.target}</div><div class="wkstatus">${w.status} → 撳開週 dashboard</div></button>`).join('');document.querySelectorAll('[data-archive]').forEach(b=>b.onclick=()=>renderArchive(b.dataset.archive));renderArchive(WEEKLY_ARCHIVES[0].id)}
 function renderHist(f){document.getElementById('hist-body').innerHTML=HIST.filter(x=>f==='all'||x.kind===f).map(x=>`<tr><td class="num">${x.date.slice(5)}</td><td>${x.type}</td><td>${x.rec}</td><td class="num">${x.val}</td></tr>`).join('')}
-document.getElementById('tab-week').onclick=()=>selectTab('week');document.getElementById('tab-archive').onclick=()=>selectTab('archive');document.getElementById('tab-history').onclick=()=>selectTab('history');document.getElementById('theme-select').onchange=e=>applyTheme(e.target.value);document.querySelectorAll('#hist-pills button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#hist-pills button').forEach(x=>x.setAttribute('aria-selected',x===b));renderHist(b.dataset.filter)});renderArchiveIndex();renderHist('all');selectTab(localStorage.getItem('melody-dashboard-tab')||'week');applyTheme(localStorage.getItem('melody-dashboard-theme')||'paper');
+document.getElementById('tab-week').onclick=()=>selectTab('week');document.getElementById('tab-archive').onclick=()=>selectTab('archive');document.getElementById('tab-history').onclick=()=>selectTab('history');document.getElementById('tab-bia').onclick=()=>selectTab('bia');document.getElementById('theme-select').onchange=e=>applyTheme(e.target.value);document.querySelectorAll('#hist-pills button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#hist-pills button').forEach(x=>x.setAttribute('aria-selected',x===b));renderHist(b.dataset.filter)});renderArchiveIndex();renderHist('all');renderBia(BIA[BIA.length-1].id);selectTab(localStorage.getItem('melody-dashboard-tab')||'week');applyTheme(localStorage.getItem('melody-dashboard-theme')||'paper');
 </script></body></html>
