@@ -115,7 +115,11 @@ const BIA=[
  {id:'2026-09-10',label:'9/10 17:56',cond:'gym room HowBodyFit · Star Trac 前',
   wt:62.7,bmi:24.5,bfp:35.1,fat:22.0,muscle:22.1,ffm:40.7,water:29.6,protein:8.1,mineral:3.0,icf:18.5,ecf:11.1,visc:10,whr:0.89,bmr:1249,score:69,age:35,
   m:{la:2.0,ra:2.0,tr:18.2,ll:6.1,rl:6.1},f:{la:1.6,ra:1.6,tr:11.1,ll:3.3,rl:3.3},
-  note:'對 9/1：體重 −1.2、BFP −0.4 pp、脂 −0.7、肌 −0.3、水 −0.4、內臟 11→10。9 日當水＋算法，唔當減咗 0.7 脂。唔採用 53.9／−9.5。家秤晏晝 62.55 ≠ 呢個 62.7。'}
+  note:'對 9/1：體重 −1.2、BFP −0.4 pp、脂 −0.7、肌 −0.3、水 −0.4、內臟 11→10。9 日當水＋算法，唔當減咗 0.7 脂。唔採用 53.9／−9.5。家秤晏晝 62.55 ≠ 呢個 62.7。'},
+ {id:'2026-09-17',label:'9/17 20:24',cond:'晚間 HowBodyFit · 上傳完整報告；未指明運動前後',
+  wt:62.5,bmi:24.4,bfp:34.7,fat:21.7,muscle:22.1,ffm:40.8,water:29.8,protein:8.0,mineral:3.0,icf:18.5,ecf:11.3,visc:10,whr:0.85,bmr:1251,score:70,age:35,
+  m:{la:1.9,ra:1.9,tr:17.5,ll:6.2,rl:6.3},f:{la:1.6,ra:1.5,tr:10.6,ll:3.5,rl:3.5},
+  note:'對 9/10 gym BIA：體重 −0.2、BFP −0.4 pp、脂 −0.3、骨骼肌 0.0、水 ＋0.2、WHR −0.04、內臟 10 不變、Score ＋1。7 日且條件未完全相同，唔當實減 0.3 脂；有用訊號係骨骼肌仍守 22.1。唔採用 app 理想 53.9／控制 −8.6／脂控 −9.2。'}
 ];
 function nfmt(v,d){return (v==null||v==='')?'—':Number(v).toFixed(d)}
 function dlt(a,b,d,u){if(a==null||b==null)return '—';const n=b-a;if(Math.abs(n)<Math.pow(10,-d-1))return '0'+u;return (n>0?'＋':'−')+Math.abs(n).toFixed(d)+u}
@@ -143,9 +147,9 @@ function renderBia(id){
   document.getElementById('bia-kpis').innerHTML=`<div class="kpi"><div class="label">體脂率</div><div class="n">${nfmt(s.bfp,1)}<span>%</span></div><div class="sub">${s.label} · 對首次 ${dlt(first.bfp,s.bfp,1,' pp')}</div></div><div class="kpi"><div class="label">骨骼肌</div><div class="n">${nfmt(s.muscle,1)}<span>kg</span></div><div class="sub">對首次 ${dlt(first.muscle,s.muscle,1,' kg')} · 守住 22+</div></div><div class="kpi"><div class="label">體脂肪</div><div class="n">${nfmt(s.fat,1)}<span>kg</span></div><div class="sub">對首次 ${dlt(first.fat,s.fat,1,' kg')}</div></div><div class="kpi"><div class="label">Score</div><div class="n">${s.score==null?'—':s.score}</div><div class="sub">內臟脂肪 ${s.visc==null?'—':s.visc} · WHR ${nfmt(s.whr,2)}</div></div>`;
   document.getElementById('bia-scans').innerHTML=BIA.map(x=>`<button class="scan-card" data-bia="${x.id}" aria-selected="${x.id===s.id}"><div class="wk">${x.label}</div><div class="wkmeta">${x.bfp.toFixed(1)}% · 肌 ${x.muscle.toFixed(1)} · 脂 ${x.fat.toFixed(1)}<br>${x.wt.toFixed(1)} kg</div><div class="wkstatus">${x.id===s.id?'而家呢張 →':'撳開呢次 dashboard'}</div></button>`).join('');
   document.querySelectorAll('[data-bia]').forEach(b=>b.onclick=()=>renderBia(b.dataset.bia));
-  document.getElementById('bia-chart-bfp').innerHTML=spark(BIA.map(x=>x.bfp),35.0,38.5,'');
+  document.getElementById('bia-chart-bfp').innerHTML=spark(BIA.map(x=>x.bfp),34.5,38.5,'');
   document.getElementById('bia-chart-muscle').innerHTML=spark(BIA.map(x=>x.muscle),21.4,22.7,'');
-  document.getElementById('bia-chart-fat').innerHTML=spark(BIA.map(x=>x.fat),21.8,24.7,'');
+  document.getElementById('bia-chart-fat').innerHTML=spark(BIA.map(x=>x.fat),21.5,24.7,'');
   document.getElementById('bia-chart-wt').innerHTML=spark(BIA.map(x=>x.wt),62.4,64.8,'');
   document.getElementById('bia-detail').innerHTML=`<h2>${s.label} · 今次詳情</h2><div class="notes"><p>${s.cond}</p></div><section class="kpis" style="grid-template-columns:1fr 1fr;margin:10px 0"><div class="kpi"><div class="label">BIA 體重</div><div class="n" style="font-size:22px">${nfmt(s.wt,1)}<span>kg</span></div></div><div class="kpi"><div class="label">BMI</div><div class="n" style="font-size:22px">${nfmt(s.bmi,1)}</div></div><div class="kpi"><div class="label">去脂體重</div><div class="n" style="font-size:22px">${nfmt(s.ffm,1)}<span>kg</span></div></div><div class="kpi"><div class="label">BMR</div><div class="n" style="font-size:22px">${s.bmr==null?'—':s.bmr}</div></div></section><div class="notes"><p>水 ${nfmt(s.water,1)} · 蛋白 ${nfmt(s.protein,1)} · 礦物質 ${nfmt(s.mineral,1)} · ICF ${nfmt(s.icf,1)} · ECF ${nfmt(s.ecf,1)}</p><p>代謝年齡 ${s.age==null?'—':s.age}（app 標示，非臨床）</p><p>${vsPrev?('對上次 '+prev.label+'：體重 '+dlt(prev.wt,s.wt,1,' kg')+' · BFP '+dlt(prev.bfp,s.bfp,1,' pp')+' · 肌 '+dlt(prev.muscle,s.muscle,1,' kg')+' · 脂 '+dlt(prev.fat,s.fat,1,' kg')):'第一次，無上次可比。'}</p><p>${s.note}</p></div>`;
   const mKeys=[['la','左臂'],['ra','右臂'],['tr','軀幹'],['ll','左腿'],['rl','右腿']];
