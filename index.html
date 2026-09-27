@@ -58,6 +58,12 @@ header{display:flex;justify-content:space-between;align-items:center;gap:16px;bo
 <footer>160 cm · HowBodyFit BIA 唔當臨床 · 體組成 tab 追蹤已 upload 嘅 8/19、8/23、8/29、9/1、9/10、9/17、9/24 · 完整分段在 Body & Training</footer>
 </div>
 <script>
+/* Discord/iPhone WebView compatibility: these views use arrays to render data.
+   Older embedded WebKit can run the tab handler but lacks Array.map/find/forEach. */
+if(!Array.prototype.forEach){Array.prototype.forEach=function(fn,ctx){var i;for(i=0;i<this.length;i++){if(i in this){fn.call(ctx,this[i],i,this);}}};}
+if(!Array.prototype.map){Array.prototype.map=function(fn,ctx){var out=[],i;for(i=0;i<this.length;i++){if(i in this){out[i]=fn.call(ctx,this[i],i,this);}}return out;};}
+if(!Array.prototype.find){Array.prototype.find=function(fn,ctx){var i;for(i=0;i<this.length;i++){if(i in this&&fn.call(ctx,this[i],i,this)){return this[i];}}};}
+if(window.NodeList&&!NodeList.prototype.forEach){NodeList.prototype.forEach=function(fn,ctx){Array.prototype.forEach.call(this,fn,ctx);};}
 const WEEKLY_ARCHIVES=[
  {id:'2026-09-14',period:'9/14–9/20',status:'已結束',target:'10,415–11,815（carry-adjusted）',used:'11,589',left:'距上限 226',days:['719','2,336','553','1,137','584','3,975','2,285'],note:'7日全數日結；合計11,589，週平均1,656。一般週額9,100–9,800加淨 carry 1,315–2,015；Lucciola 3,975及中秋節餐2,285已納入，最後仍距上限226。'},
  {id:'2026-09-07',period:'9/7–9/13',status:'已結束',target:'9,100–9,800',used:'6,765',left:'剩 2,335–3,035',days:['455','1,355','485','690','1,270','1,565','945'],note:'7日全數日結：合計6,765，週平均966。用此週剩餘扣8/24–8/30超504及8/31–9/6超516後，淨carry 1,315–2,015入9/14–9/20。'},
